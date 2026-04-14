@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova3D Engine</title>
+    <meta name="description" content="Nova3D is an indie game engine focused on strong visuals, scene editing, asset import, and a clean engine workflow.">
+    <link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="home">
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">N3</span>
+                <span>
+                    <strong>Nova3D</strong>
+                    <small>Indie engine showcase</small>
+                </span>
+            </a>
+            <nav class="site-nav">
+                <a href="index.html">Overview</a>
+                <a href="api.html">API Reference</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero panel hero-panel">
+                <div class="hero-copy">
+                    <div class="hero-intro-row">
+                        <p class="eyebrow">Rendering, editing, and engine tools</p>
+                        <span class="status-pill">Indie engine in active development</span>
+                    </div>
+                    <h1>Docs that explain the renderer and the workflow at the same time.</h1>
+                    <p class="hero-text">
+                        Nova3D is shaping up as a practical scene-focused engine: import assets, inspect the runtime,
+                        switch between fast raster work and richer lighting paths, and keep the source-oriented docs close
+                        enough that engine iteration does not turn into archaeology.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="api.html">Browse Engine API</a>
+                        <a class="button button-secondary" href="#start-here">Start With the Architecture</a>
+                    </div>
+                    <div class="hero-ribbon" aria-label="Nova3D highlights">
+                        <article>
+                            <span>Import</span>
+                            <strong>glTF and OBJ scene intake</strong>
+                        </article>
+                        <article>
+                            <span>Render</span>
+                            <strong>Vulkan-first with Metal groundwork</strong>
+                        </article>
+                        <article>
+                            <span>Edit</span>
+                            <strong>Viewport tools, picking, and mesh work</strong>
+                        </article>
+                    </div>
+                </div>
+                <div class="hero-stage">
+                    <article class="hero-console">
+                        <div class="hero-console-head">
+                            <span class="chip">Source Map</span>
+                            <span class="console-state">Modules online</span>
+                        </div>
+                        <h2>Current focus areas</h2>
+                        <ul class="signal-list">
+                            <li>
+                                <span class="signal-label">Renderer split</span>
+                                <strong>Vulkan runtime today, Metal scaffold in progress</strong>
+                            </li>
+                            <li>
+                                <span class="signal-label">Editor loop</span>
+                                <strong>Picking, gizmos, orchestration, early modeling</strong>
+                            </li>
+                            <li>
+                                <span class="signal-label">Scene path</span>
+                                <strong>Canonical scene data shared by import, editor, and renderers</strong>
+                            </li>
+                        </ul>
+                    </article>
+                    <div class="hero-metrics">
+                        <article class="metric-card metric-card-strong">
+                            <span class="metric-label">Rendering</span>
+                            <strong>Ray tracing and raster paths</strong>
+                            <p>Use responsive previews while working, then step into richer lighting and debug passes when needed.</p>
+                        </article>
+                        <article class="metric-card">
+                            <span class="metric-label">Workflow</span>
+                            <strong>Editor-first scene iteration</strong>
+                            <p>Import content, pick objects, move through the viewport, and keep iteration tight.</p>
+                        </article>
+                        <article class="metric-card">
+                            <span class="metric-label">Docs</span>
+                            <strong>Feature site plus source-aware API view</strong>
+                            <p>Use the landing page as the mental model, then drill into headers once you need exact entry points.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel section-block start-block" id="start-here">
+                <div class="section-heading section-heading-inline">
+                    <div>
+                        <p class="eyebrow">Start Here</p>
+                        <h2>Three ways into the codebase</h2>
+                    </div>
+                    <p class="gallery-note">Use the route that matches the question you are trying to answer.</p>
+                </div>
+                <div class="start-grid">
+                    <article class="start-card start-card-emphasis">
+                        <span class="chip">If you need the big picture</span>
+                        <h3>Read the module architecture first</h3>
+                        <p>Start with the major engine areas, then move from module overview pages into individual public headers.</p>
+                        <a class="text-link" href="#module-overview-block">Jump to module overview</a>
+                    </article>
+                    <article class="start-card">
+                        <span class="chip">If you are touching rendering</span>
+                        <h3>Begin with backend boundaries</h3>
+                        <p>NovaRendererVK holds the live render path, while NovaRendererMTL is laying in backend-owned runtime pieces on macOS.</p>
+                        <a class="text-link" href="api.html?page=nova-renderer-vk">Open renderer pages</a>
+                    </article>
+                    <article class="start-card">
+                        <span class="chip">If you are changing tools</span>
+                        <h3>Follow the editor orchestration</h3>
+                        <p>NovaEditor is where picking, viewport behavior, startup sequencing, and modeling features meet.</p>
+                        <a class="text-link" href="api.html?page=nova-editor">Open editor pages</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel section-block">
+                <div class="section-heading">
+                    <p class="eyebrow">Capabilities</p>
+                    <h2>What Nova3D is already organized around</h2>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <span class="chip">Rendering</span>
+                        <h3>Ray-traced lighting</h3>
+                        <p>Acceleration structures, shader binding setup, and richer lighting are already first-class concepts in the renderer docs.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="chip">Rendering</span>
+                        <h3>Fast real-time rendering</h3>
+                        <p>Raster pipelines, depth handling, Hi-Z passes, and picking support keep the working view responsive.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="chip">Lighting</span>
+                        <h3>Shadow and visibility tooling</h3>
+                        <p>Shadow depth paths, frustum culling, occlusion, and debug utilities are visible as explicit engine systems.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="chip">Assets</span>
+                        <h3>Scene import</h3>
+                        <p>glTF and OBJ data flow into a shared scene representation instead of taking separate editor and renderer detours.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="chip">Workflow</span>
+                        <h3>Shared scene state</h3>
+                        <p>Scene data, ECS-backed world state, and renderer-facing caches are documented as one continuous pipeline.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="chip">Editor</span>
+                        <h3>Viewport editing tools</h3>
+                        <p>Select, inspect, move, and push into early mesh editing without leaving the main engine flow.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel section-block workflow-block">
+                <div class="section-heading section-heading-inline">
+                    <div>
+                        <p class="eyebrow">Workflow Map</p>
+                        <h2>How the engine work tends to flow</h2>
+                    </div>
+                    <p class="gallery-note">The docs page now mirrors the way you actually traverse the source tree.</p>
+                </div>
+                <div class="workflow-grid">
+                    <article class="workflow-card">
+                        <span class="workflow-step">01</span>
+                        <h3>Import into shared scene data</h3>
+                        <p>Asset loading produces a canonical scene format that both the editor and renderer can consume without duplicate translation layers.</p>
+                    </article>
+                    <article class="workflow-card">
+                        <span class="workflow-step">02</span>
+                        <h3>Sync into live world state</h3>
+                        <p>Scene containers and ECS records keep runtime ownership, UI state, and renderer-facing data in agreement.</p>
+                    </article>
+                    <article class="workflow-card">
+                        <span class="workflow-step">03</span>
+                        <h3>Render, inspect, and debug</h3>
+                        <p>Raster, ray tracing, picking, Hi-Z, and shadow passes stay visible as separate concerns instead of disappearing behind one entry point.</p>
+                    </article>
+                    <article class="workflow-card workflow-card-accent">
+                        <span class="workflow-step">04</span>
+                        <h3>Iterate through the editor</h3>
+                        <p>Viewport controls, gizmos, and modeling hooks bring the whole loop back to an engine-facing editing surface.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel section-block architecture-block" id="module-overview-block">
+                <div class="section-heading section-heading-inline">
+                    <div>
+                        <p class="eyebrow">Engine Areas</p>
+                        <h2>The main parts of Nova3D</h2>
+                    </div>
+                    <a class="button button-secondary button-compact" href="api.html">Open the full reference</a>
+                </div>
+                <div class="architecture-grid" id="module-overview"></div>
+            </section>
+
+            <section class="panel section-block docs-block">
+                <div class="section-heading">
+                    <p class="eyebrow">Documentation</p>
+                    <h2>Docs tracks that match the current project state</h2>
+                </div>
+                <div class="docs-track-grid">
+                    <article class="track-card active-track">
+                        <span class="chip">Live now</span>
+                        <h3>Engine API reference</h3>
+                        <p>Module pages, public headers, symbols, responsibilities, and a navigation layout that scales without changing the mental model.</p>
+                        <ul class="track-list">
+                            <li>Browse by engine area instead of by filename dump.</li>
+                            <li>Filter modules, headers, and symbols from one sidebar.</li>
+                            <li>Move from overview pages into concrete include points.</li>
+                        </ul>
+                        <a class="text-link" href="api.html">Open engine API reference</a>
+                    </article>
+                    <article class="track-card">
+                        <span class="chip muted-chip">Planned</span>
+                        <h3>Lua scripting reference</h3>
+                        <p>The site is intentionally leaving space for runtime scripting docs later without pretending that surface exists today.</p>
+                        <p class="track-note">That keeps the current docs honest while still reserving room for expansion.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel section-block gallery-block" id="gallery">
+                <div class="section-heading section-heading-inline">
+                    <div>
+                        <p class="eyebrow">Screenshot Gallery</p>
+                        <h2>Visual slots ready for real captures</h2>
+                    </div>
+                    <p class="gallery-note">The placeholders still work, but the framing now feels deliberate instead of temporary.</p>
+                </div>
+                <div class="gallery-grid">
+                    <figure class="gallery-card">
+                        <img src="assets/screenshots/temp-editor-overview.svg" alt="Temporary editor overview screenshot placeholder">
+                        <figcaption>
+                            <div>
+                                <strong>Editor overview</strong>
+                                <p>Dock layout, viewport tools, and the current scene working surface.</p>
+                            </div>
+                            <span class="tag-row"><span>editor</span><span>viewport</span><span>ui</span></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-card">
+                        <img src="assets/screenshots/temp-pathtracer.svg" alt="Temporary path tracing screenshot placeholder">
+                        <figcaption>
+                            <div>
+                                <strong>Path tracing</strong>
+                                <p>High-quality lighting path for material and reflection inspection.</p>
+                            </div>
+                            <span class="tag-row"><span>ray tracing</span><span>materials</span><span>lighting</span></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-card">
+                        <img src="assets/screenshots/temp-raster-hiz.svg" alt="Temporary raster and Hi-Z screenshot placeholder">
+                        <figcaption>
+                            <div>
+                                <strong>Raster and Hi-Z</strong>
+                                <p>Faster preview path with visibility tooling and debug coverage.</p>
+                            </div>
+                            <span class="tag-row"><span>raster</span><span>occlusion</span><span>debug</span></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-card">
+                        <img src="assets/screenshots/temp-modeling.svg" alt="Temporary modeling workflow screenshot placeholder">
+                        <figcaption>
+                            <div>
+                                <strong>Modeling workflow</strong>
+                                <p>Early in-engine mesh editing and gizmo-driven geometry work.</p>
+                            </div>
+                            <span class="tag-row"><span>modeling</span><span>mesh editor</span><span>gizmos</span></span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="panel section-block callout-block">
+                <div>
+                    <p class="eyebrow">Next Steps</p>
+                    <h2>Where this docs site can grow next</h2>
+                </div>
+                <div class="callout-grid">
+                    <article>
+                        <h3>Deep renderer guides</h3>
+                        <p>Add focused walkthroughs for descriptors, acceleration structures, shadows, and visibility systems.</p>
+                    </article>
+                    <article>
+                        <h3>Real screenshots and clips</h3>
+                        <p>Replace placeholders with captured scenes, tool flows, and before-and-after lighting comparisons.</p>
+                    </article>
+                    <article>
+                        <h3>Scripting track later</h3>
+                        <p>When Lua becomes real, the current layout can expand without forcing a site redesign.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Nova3D feature site and API reference.</p>
+            <p class="footer-meta">Rendering, editing, import, tools, and docs in one place.</p>
+        </footer>
+    </div>
+
+    <script src="assets/site.js"></script>
+</body>
+</html>
